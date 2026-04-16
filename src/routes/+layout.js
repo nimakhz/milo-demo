@@ -1,5 +1,6 @@
 import { browser } from "$app/environment";
 import { redirect } from "@sveltejs/kit";
+import { base } from "$app/paths";
 
 const STORAGE_KEY = "milo.auth";
 const protectedRoutes = ["/chat", "/history", "/profile"];
@@ -11,16 +12,20 @@ export function load({ url }) {
 
     const path = url.pathname;
     const authed = window.localStorage.getItem(STORAGE_KEY) === "1";
-    const isLogin = path === "/login";
+    const loginPath = `${base}/login`;
+    const chatPath = `${base}/chat`;
+
+    const isLogin = path === loginPath;
     const needsAuth =
-        path === "/" || protectedRoutes.some((r) => path === r || path.startsWith(`${r}/`));
+        path === `${base}/` ||
+        protectedRoutes.some((r) => path === `${base}${r}` || path.startsWith(`${base}${r}/`));
 
     if (!authed && needsAuth && !isLogin) {
-        throw redirect(302, "/login");
+        throw redirect(302, loginPath);
     }
 
     if (authed && isLogin) {
-        throw redirect(302, "/chat");
+        throw redirect(302, chatPath);
     }
 }
 

@@ -1,10 +1,11 @@
 <script>
     import { goto } from "$app/navigation";
+    import { base } from "$app/paths";
     import AppLogo from "$lib/components/AppLogo.svelte";
     import LoginForm from "$lib/components/LoginForm.svelte";
 
     function onSuccess() {
-        goto("/chat");
+        goto(`${base}/chat`);
     }
 </script>
 
