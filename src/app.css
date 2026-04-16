@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --primary: #156b3e;
+    --primary-light: #e8f5e9;
+    --accent: #ff9800;
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --bg-secondary: #f4f5f4;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --border-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-variant-numeric: proportional-nums;
+    -moz-font-feature-settings: "ss03";
+    -webkit-font-feature-settings: "ss03";
+    font-feature-settings: "ss03"; /* Forces Persian digits in some Vazirmatn versions */
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    direction: rtl;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.premium-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
