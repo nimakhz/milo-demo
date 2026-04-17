@@ -5,7 +5,6 @@
      * این کامپوننت مدیریت جابجایی بین بخش‌های اصلی اپلیکیشن را بر عهده دارد.
      */
     import Icon from "./Icon.svelte";
-    import { base } from "$app/paths";
     
     export let activeTab = "/";
 
@@ -16,17 +15,22 @@
         { id: "profile", icon: "user", label: "پروفایل", path: "/profile" }
     ];
 
+    // Base path (GitHub Pages serves under /<repo>/)
+    const basePath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+
+    const withBase = (p) => (basePath ? `${basePath}${p}` : p);
+
     // تشخیص تب فعال فعلی برای اعمال استایل‌های های‌لایت
-    $: currentTab = activeTab === `${base}/` ? `${base}/profile` : activeTab;
+    $: currentTab = activeTab === withBase("/") ? withBase("/profile") : activeTab;
 </script>
 
 <nav class="bottom-nav">
     <div class="nav-content">
         {#each navItems as item}
             <a 
-                href={`${base}${item.path}`} 
+                href={withBase(item.path)} 
                 class="nav-item" 
-                class:active={currentTab.includes(`${base}${item.path}`)}
+                class:active={currentTab.includes(withBase(item.path))}
             >
                 <Icon name={item.icon} size={24} />
                 <span>{item.label}</span>

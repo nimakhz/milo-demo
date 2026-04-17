@@ -1,11 +1,11 @@
 <script>
     import { goto } from "$app/navigation";
-    import { base } from "$app/paths";
     import AppLogo from "$lib/components/AppLogo.svelte";
     import LoginForm from "$lib/components/LoginForm.svelte";
 
     function onSuccess() {
-        goto(`${base}/chat`);
+        const basePath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+        goto(basePath ? `${basePath}/chat` : "/chat");
     }
 </script>
 
