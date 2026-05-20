@@ -34,7 +34,9 @@
 <style>
     .info-card {
         padding: 15px;
-        border-radius: 15px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
     }
 
     .card-header {
@@ -60,6 +62,7 @@
         padding: 0;
         overflow: hidden;
         background: white;
+        box-shadow: 0 14px 32px rgba(20, 32, 25, 0.1);
     }
 
     .suggestion-image {
@@ -68,6 +71,13 @@
     }
 
     .suggestion-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .suggestion-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.28));
+    }
 
     .suggestion-tag {
         position: absolute;
@@ -79,6 +89,8 @@
         font-size: 0.75rem;
         font-weight: 800;
         color: var(--text-main);
+        z-index: 1;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
     .suggestion-footer {

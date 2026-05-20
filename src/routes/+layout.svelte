@@ -25,6 +25,9 @@
         flex-direction: column;
         padding-bottom: 90px; /* Space for BottomNav */
         position: relative;
+        background: linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,255,255,0.24));
+        box-shadow: 0 0 0 1px rgba(18, 99, 58, 0.05), 0 28px 80px rgba(20, 32, 25, 0.08);
+        overflow: hidden;
     }
 
     main {

@@ -47,14 +47,17 @@
 <style>
     .login-card {
         width: 100%;
-        padding: 24px;
+        padding: 26px;
+        position: relative;
+        z-index: 1;
     }
 
     .title h1 {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
         font-weight: 900;
         color: var(--text-main);
         margin-bottom: 4px;
+        letter-spacing: -0.04em;
     }
     .title p {
         color: var(--text-muted);
@@ -79,17 +82,20 @@
 
     input {
         width: 100%;
-        background: #f1f5f1;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 14px;
-        padding: 12px 14px;
+        background: rgba(238, 244, 234, 0.82);
+        border: 1px solid var(--border-subtle);
+        border-radius: 18px;
+        padding: 13px 15px;
         outline: none;
         font-family: inherit;
         font-size: 1rem;
+        color: var(--text-main);
+        transition: border-color 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
     }
     input:focus {
-        border-color: rgba(21, 107, 62, 0.35);
-        box-shadow: 0 0 0 4px rgba(21, 107, 62, 0.08);
+        background: white;
+        border-color: rgba(18, 99, 58, 0.35);
+        box-shadow: 0 0 0 5px rgba(18, 99, 58, 0.08);
     }
 
     .error {
@@ -106,13 +112,17 @@
     .login-btn {
         margin-top: 18px;
         width: 100%;
-        height: 48px;
-        border-radius: 16px;
-        background: var(--primary);
+        height: 52px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-strong));
         color: white;
         font-weight: 800;
         font-size: 1rem;
-        box-shadow: 0 10px 25px rgba(21, 107, 62, 0.18);
+        box-shadow: 0 16px 32px rgba(18, 99, 58, 0.24);
+    }
+    .login-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 20px 38px rgba(18, 99, 58, 0.28);
     }
     .login-btn:focus-visible {
         outline: 2px solid var(--primary);

@@ -27,12 +27,14 @@
 
 <style>
     .metric-card {
-        background: var(--bg-secondary);
+        background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(238,244,234,0.76));
         padding: 20px;
-        border-radius: 30px;
+        border-radius: var(--radius-lg);
         display: flex;
         flex-direction: column;
         gap: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        box-shadow: var(--shadow-soft);
     }
 
     .metric-header span {
@@ -43,17 +45,18 @@
     .metric-icon {
         width: 36px;
         height: 36px;
-        border-radius: 12px;
+        border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52);
     }
 
     /* رنگ‌بندی‌های مختلف برای آیکون‌ها */
-    .weight-bg { background: #dcfce7; color: #15803d; }
-    .height-bg { background: #fef9c3; color: #a16207; }
-    .utensils-bg { background: #f0fdf4; color: #15803d; }
-    .zap-bg { background: #eff6ff; color: #1d4ed8; }
+    .weight-bg { background: var(--primary-soft); color: var(--primary); }
+    .height-bg { background: #fef3c7; color: #a16207; }
+    .utensils-bg { background: var(--primary-light); color: var(--primary); }
+    .zap-bg { background: #e0f2fe; color: #0369a1; }
 
     .metric-value {
         display: flex;
@@ -64,6 +67,7 @@
     .metric-value .value {
         font-size: 1.6rem;
         font-weight: 900;
+        letter-spacing: -0.04em;
     }
 
     .metric-value .unit {
