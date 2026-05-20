@@ -53,10 +53,10 @@
         display: flex;
         padding: 0;
         overflow: hidden;
-        border-radius: 25px;
-        background: var(--bg-card);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.9);
         box-shadow: var(--shadow-soft);
-        border: 1px solid rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.76);
     }
 
     .meal-image {
@@ -74,15 +74,16 @@
         position: absolute;
         bottom: 10px;
         left: 10px;
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(10px);
         padding: 4px 8px;
-        border-radius: 10px;
+        border-radius: 999px;
         display: flex;
         align-items: center;
         gap: 4px;
         font-size: 0.7rem;
         font-weight: 700;
+        box-shadow: 0 8px 18px rgba(20, 32, 25, 0.12);
     }
 
     .meal-content {
@@ -110,13 +111,17 @@
 
     .meal-macros {
         display: flex;
-        gap: 15px;
+        gap: 8px;
         margin-top: 5px;
+        flex-wrap: wrap;
     }
 
     .macro {
         display: flex;
         flex-direction: column;
+        background: var(--bg-secondary);
+        border-radius: 14px;
+        padding: 6px 9px;
     }
 
     .macro-label {

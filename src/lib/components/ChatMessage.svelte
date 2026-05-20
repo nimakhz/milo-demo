@@ -56,7 +56,8 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background: #4ade80;
+        background: linear-gradient(135deg, var(--primary), var(--success));
+        box-shadow: 0 10px 22px rgba(18, 99, 58, 0.2);
         flex-shrink: 0;
     }
 
@@ -65,7 +66,8 @@
         height: 32px;
         border-radius: 50%;
         overflow: hidden;
-        background: #eee;
+        background: var(--bg-secondary);
+        box-shadow: 0 8px 18px rgba(20, 32, 25, 0.08);
         flex-shrink: 0;
     }
 
@@ -73,23 +75,26 @@
 
     .message-bubble {
         padding: 16px;
-        border-radius: 20px;
+        border-radius: 22px;
         position: relative;
         font-size: 0.95rem;
         font-weight: 500;
         line-height: 1.6;
+        box-shadow: 0 10px 26px rgba(20, 32, 25, 0.07);
     }
 
     .bot .message-bubble {
-        background: #f1f5f1;
+        background: rgba(255, 255, 255, 0.86);
         color: var(--text-main);
         border-bottom-right-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.82);
     }
 
     .user .message-bubble {
-        background: var(--primary);
+        background: linear-gradient(135deg, var(--primary), var(--primary-strong));
         color: white;
         border-bottom-left-radius: 4px;
+        box-shadow: 0 14px 30px rgba(18, 99, 58, 0.2);
     }
 
     .time {

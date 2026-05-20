@@ -42,24 +42,25 @@
 <style>
     .bottom-nav {
         position: fixed;
-        bottom: 20px;
+        bottom: 18px;
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 40px);
-        max-width: 440px;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border-radius: 30px;
-        padding: 10px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: calc(100% - 32px);
+        max-width: 448px;
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(22px);
+        border-radius: 32px;
+        padding: 9px;
+        box-shadow: 0 22px 48px rgba(20, 32, 25, 0.16);
         z-index: 1000;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.78);
     }
 
     .nav-content {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        gap: 6px;
     }
 
     .nav-item {
@@ -68,20 +69,25 @@
         align-items: center;
         text-decoration: none;
         color: var(--text-muted);
-        gap: 4px;
+        gap: 5px;
         flex: 1;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 58px;
+        justify-content: center;
+        border-radius: 24px;
+        transition: all 0.28s var(--ease-smooth);
         font-size: 0.75rem;
-        font-weight: 500;
+        font-weight: 700;
     }
 
     .nav-item.active {
-        color: var(--primary);
+        color: var(--primary-strong);
+        background: linear-gradient(180deg, var(--primary-light), rgba(223, 245, 233, 0.58));
+        box-shadow: inset 0 0 0 1px rgba(18, 99, 58, 0.08);
     }
 
     .nav-item.active :global(svg) {
-        transform: scale(1.1);
-        fill: var(--primary-light);
+        transform: translateY(-1px) scale(1.08);
+        fill: rgba(18, 99, 58, 0.12);
     }
 
     span {

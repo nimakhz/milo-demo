@@ -70,26 +70,34 @@
 
 <style>
     .history-page {
-        padding-bottom: 120px;
+        padding: 20px 18px 120px;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 24px;
+        background:
+            radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 15rem),
+            linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,247,239,0.72));
     }
 
     header { margin-bottom: 10px; }
-    h1 { font-size: 1.6rem; font-weight: 900; color: var(--text-main); }
+    h1 { font-size: 1.62rem; font-weight: 900; color: var(--text-main); letter-spacing: -0.04em; }
     .subtitle {
         color: var(--primary);
         font-weight: 700;
         font-size: 0.85rem;
-        background: #f0fdf4;
+        background: var(--primary-light);
         padding: 4px 12px;
         border-radius: 20px;
         width: fit-content;
         margin-top: 4px;
     }
 
-    .icon-btn { background: none; padding: 8px; }
+    .icon-btn {
+        background: rgba(255,255,255,0.74);
+        padding: 10px;
+        border-radius: 16px;
+        box-shadow: 0 10px 24px rgba(20, 32, 25, 0.08);
+    }
 
     .summary-stats {
         display: grid;
@@ -99,7 +107,14 @@
 
     .section-header { margin: 10px 0; }
     .section-title { font-size: 1.2rem; font-weight: 800; }
-    .text-btn { background: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; }
+    .text-btn {
+        background: var(--primary-light);
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 0.9rem;
+        border-radius: 999px;
+        padding: 6px 12px;
+    }
 
     .timeline {
         display: flex;
@@ -123,20 +138,20 @@
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background: #e2e8f0;
+        background: rgba(18, 99, 58, 0.16);
         z-index: 2;
         margin-top: 6px;
     }
 
     .dot.active {
         background: var(--primary);
-        box-shadow: 0 0 0 4px rgba(21, 107, 62, 0.1);
+        box-shadow: 0 0 0 5px rgba(18, 99, 58, 0.12);
     }
 
     .line {
         flex: 1;
         width: 2px;
-        background: #f1f5f9;
+        background: rgba(18, 99, 58, 0.1);
         margin: 4px 0;
     }
 

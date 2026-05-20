@@ -31,6 +31,13 @@
         flex-direction: column;
         align-items: center;
         gap: 8px;
+        padding: 26px 18px 24px;
+        border-radius: 34px;
+        background:
+            radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.14), transparent 11rem),
+            rgba(255, 255, 255, 0.68);
+        border: 1px solid rgba(255, 255, 255, 0.74);
+        box-shadow: var(--shadow-soft);
     }
 
     .avatar-container {
@@ -43,7 +50,8 @@
         height: 120px;
         border-radius: 50%;
         padding: 5px;
-        background: linear-gradient(45deg, var(--primary), #4ade80);
+        background: linear-gradient(135deg, var(--primary), var(--success), var(--accent));
+        box-shadow: 0 18px 38px rgba(18, 99, 58, 0.2);
     }
 
     .avatar-ring img {
@@ -58,7 +66,7 @@
         position: absolute;
         bottom: 5px;
         right: 5px;
-        background: var(--primary);
+        background: linear-gradient(135deg, var(--primary), var(--primary-strong));
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -84,9 +92,9 @@
         color: white;
         padding: 12px 40px;
         border-radius: 30px;
-        font-weight: 600;
+        font-weight: 800;
         font-size: 1rem;
         margin-top: 10px;
-        box-shadow: 0 4px 15px rgba(21, 107, 62, 0.3);
+        box-shadow: 0 14px 30px rgba(18, 99, 58, 0.22);
     }
 </style>

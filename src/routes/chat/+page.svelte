@@ -152,12 +152,31 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        padding: 20px;
-        background: #fcfcfc;
+        padding: 20px 18px;
+        background:
+            radial-gradient(circle at top left, rgba(245, 158, 11, 0.13), transparent 15rem),
+            linear-gradient(180deg, rgba(255,255,255,0.72), rgba(245,247,239,0.78));
     }
 
-    .chat-meta { margin: 10px 0 20px; }
-    .chat-meta h1 { font-size: 1.6rem; font-weight: 900; color: var(--text-main); }
+    header {
+        position: relative;
+        z-index: 2;
+    }
+
+    .chat-meta {
+        margin: 18px 0 20px;
+        padding: 18px;
+        border-radius: var(--border-radius);
+        background: linear-gradient(135deg, rgba(255,255,255,0.84), rgba(237,249,241,0.72));
+        border: 1px solid rgba(255,255,255,0.72);
+        box-shadow: var(--shadow-soft);
+    }
+    .chat-meta h1 {
+        font-size: 1.62rem;
+        font-weight: 900;
+        color: var(--text-main);
+        letter-spacing: -0.04em;
+    }
     .chat-meta p { color: var(--text-muted); font-weight: 500; }
     .chat-meta span { color: var(--primary); font-weight: 700; }
 
@@ -166,8 +185,8 @@
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        gap: 25px;
-        padding-bottom: 110px;
+        gap: 22px;
+        padding: 4px 2px 112px;
         mask-image: linear-gradient(to bottom, transparent, black 1%, black 95%, transparent);
     }
 
@@ -175,22 +194,24 @@
 
     .input-area {
         position: fixed;
-        bottom: 110px;
+        bottom: 108px;
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 40px);
-        max-width: 440px;
+        width: calc(100% - 32px);
+        max-width: 448px;
         z-index: 10;
     }
 
     .input-wrapper {
-        background: #f1f5f1;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         border-radius: 35px;
         padding: 8px;
         display: flex;
         align-items: center;
         gap: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        box-shadow: 0 18px 42px rgba(20, 32, 25, 0.14);
+        backdrop-filter: blur(18px);
     }
 
     input {
@@ -201,6 +222,7 @@
         padding: 10px;
         font-family: inherit;
         font-size: 1rem;
+        color: var(--text-main);
     }
 
     .add-btn {
@@ -208,13 +230,14 @@
         height: 45px;
         border-radius: 50%;
         background: none;
-        color: #666;
+        color: var(--text-muted);
     }
 
     .send-btn {
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        background: var(--primary);
+        background: linear-gradient(135deg, var(--primary), var(--success));
+        box-shadow: 0 12px 26px rgba(18, 99, 58, 0.24);
     }
 </style>

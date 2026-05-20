@@ -7,17 +7,18 @@
 </script>
 
 <button class="icon-btn qr-scan-btn" aria-label={ariaLabel} on:click={onClick}>
-    <Icon name="qr" size={size} color="#156b3e" />
+    <Icon name="qr" size={size} color="#12633a" />
 </button>
 
 <style>
     .icon-btn { background: none; padding: 8px; }
 
     .qr-scan-btn {
-        background: var(--primary-light);
-        border: 1px solid rgba(21, 107, 62, 0.15);
-        border-radius: 14px;
+        background: rgba(237, 249, 241, 0.9);
+        border: 1px solid rgba(18, 99, 58, 0.14);
+        border-radius: 16px;
         padding: 10px;
+        box-shadow: 0 10px 22px rgba(18, 99, 58, 0.08);
     }
 
     .qr-scan-btn:focus-visible {
